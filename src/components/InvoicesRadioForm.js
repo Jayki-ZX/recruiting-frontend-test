@@ -2,7 +2,7 @@ export default function InvoicesRadioForm({ invoices, selectedInvoice, setSelect
     return (
       <fieldset>
         {invoices.map(invoice => (
-          <Child invoice={invoice}
+          <Child key={invoice.id} invoice={invoice}
             selectedInvoice={selectedInvoice} 
             setSelectedInvoice={setSelectedInvoice}/>
         ))}

@@ -17,9 +17,6 @@ function App() {
   const [selectedCreditNote, setSelectedCreditNote] = useState(null)
   const [isModalOpen, setModalOpen] = useState(false);
 
-  const [selectedInvoiceObj, setSelectedInvoiceObj] = useState({})
-  const [selectedCreditNoteObj, setSelectedCreditNoteObj] = useState({})
-
   const handleAssign = (e) => {
     e.preventDefault();
     setModalOpen(true); // Open the modal on form submit
@@ -64,7 +61,7 @@ function App() {
           Child={PendingInvoice} />
 
         {pendingInvoices &&
-        <div class='pt-10'>
+        <div className='pt-10'>
           <div className='font-bold pb-2'>Credit notes</div>
           <InvoicesRadioForm
             invoices={filterCreditNotes}
